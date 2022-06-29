@@ -13,25 +13,25 @@ use App\Models\Listing;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/blog',function(){
+Route::get('/',function(){
      
     $data=[
         'heading'=>'Blogs',
-        'blogs'=>Listing::all()
+        'listings'=>Listing::all()
     ];
 
-    return view('blog',$data);
+    return view('listings',$data);
 });
 
-Route::get('/blog/{id}',function($id){
+Route::get('/{id}',function($id){
     $data=[
-        'blog'=>Listing::find($id)
+        'listing'=>Listing::find($id)
     ];
    
-    return view('blog1',$data);
+    return view('listing',$data);
 
 });
