@@ -1,3 +1,7 @@
+@extends('layout')
+
+@section('content')
+
 {{$heading}}
 
 @if(count($listings)==0)
@@ -11,3 +15,5 @@
 @endforeach
 
 @endif
+
+@endsection
